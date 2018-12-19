@@ -122,6 +122,11 @@ class FieldSet(object):
             for f in vfield:
                 setattr(self, f.name, f)
                 f.fieldset = self
+        else:
+            self.add_field(vfield.U)
+            self.add_field(vfield.V)
+            if hasattr(vfield, W):
+                self.add_field(vfield.W)
 
     def check_complete(self):
         assert self.U, 'FieldSet does not have a Field named "U"'
