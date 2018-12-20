@@ -125,7 +125,7 @@ class FieldSet(object):
         else:
             self.add_field(vfield.U)
             self.add_field(vfield.V)
-            if hasattr(vfield, W):
+            if hasattr(vfield, 'W'):
                 self.add_field(vfield.W)
 
     def check_complete(self):
